@@ -1,0 +1,92 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.price{
+  text-decoration: line-through;
+  margin-right: 16px;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+.img-block {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.img-block .pic{
+    max-width:320px;
+    width: 320px;
+    height: auto;
+}
+
+.img-block select{
+    color:gray;
+}
+
+.img-block .material-icons {
+    font-size: inherit;
+}
+
+.qty{
+    margin-bottom: 16px;
+}
+
+footer.page-footer {
+    margin: 0;
+}
+@media screen and (max-width: 1200px) {
+  .img-block pic{
+    max-width: 240px;
+    width: 240px;
+    height: auto;
+  }
+
+}
+
+@media screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+    .img-block pic{
+        max-width: 160px;
+        width: 160px;
+        height: auto;
+    }
+
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
