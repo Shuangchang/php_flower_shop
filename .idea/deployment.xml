@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="kelvinServer" showNewOnSourceInSync="false" showNewOnTargetInSync="false">
+  <component name="PublishConfigData">
     <serverData>
       <paths name="kelvinServer">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/sxc8355/Sites/756" local="$PROJECT_DIR$" web="/756" />
+            <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

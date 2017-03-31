@@ -5,27 +5,24 @@
  * Date: 3/13/17
  * Time: 9:54 PM
  */
-    $per_page = 6;
-    $all_pagination = $db->getALLPagination($per_page);
-    $all = $db->getALL();
-
-    if(isset($_POST["type"]) && ($_POST["type"]=="add")){
-        if(!isset($_POST["qty"])){
-            echo "<p>Please select quantity.</p>";
-        }
-//        $item = $db->getOneById($_POST["item_id"]);
-//        echo "<pre>";
-//        print_r($item);
-//        echo "</pre>";
-
-        $db->addToCart($_POST["item_id"],$_POST["qty"]);
-        echo "<p>You have added an item in cart.</p>";
-    }
+//    $per_page = 6;
+//    $all_pagination = $db->getALLPagination($per_page);
+//    $all = $db->getALL();
+//
+//    if(isset($_POST["type"]) && ($_POST["type"]=="add")){
+//        if(!isset($_POST["qty"])){
+//            echo "<p>Please select quantity.</p>";
+//        }
+//        $db->addToCart($_POST["item_id"],$_POST["qty"],$s_id);
+//        $message = "You have added an item in cart.";
+//        $allSale = $db->getSale();
+//        $all_pagination = $db->getALLPagination($per_page);
+//    }
 ?>
 
 <div class="container">
     <div class="section">
-
+        <h4 class="center">Catalog</h4>
             <?php
             $count = 1;
             foreach ($all_pagination as $product){
@@ -40,9 +37,11 @@
             }
             ?>
         <div class="section col s12">
-            <?php
-                $pagination->pagination_links($all,$per_page);
-            ?>
+            <div class="row center">
+                <?php
+                    $pagination->pagination_links($all,$per_page);
+                ?>
+            </div>
         </div>
     </div>
 </div>
@@ -51,7 +50,7 @@
     <div class="section no-pad-bot">
         <div class="container">
             <div class="row center">
-                <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+                <h5 class="header col s12 light">Experience tranquility...</h5>
             </div>
         </div>
     </div>

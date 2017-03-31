@@ -14,6 +14,21 @@
     }
     $db = new DB();
     $pagination = new Pagination();
+    $s_id = session_id();
+    $allSale = $db->getSale();
+    $per_page = 6;
+    $all_pagination = $db->getALLPagination($per_page);
+    $all = $db->getALL();
+
+    if(isset($_POST["type"]) && ($_POST["type"]=="add")){
+        if(!isset($_POST["qty"])){
+            echo "<p>Please select quantity.</p>";
+        }
+        $db->addToCart($_POST["item_id"],$_POST["qty"],$s_id);
+        $message = "You have added an item in cart.";
+        $allSale = $db->getSale();
+        $all_pagination = $db->getALLPagination($per_page);
+    }
 ?>
 
 <div id="index-banner" class="parallax-container">
@@ -24,10 +39,7 @@
             <div class="row center">
                 <h5 class="header col s12 light">Echeveria Collection Spring Sale 2017 . Plus free shipping from March 10 - 28. </h5>
             </div>
-            <div class="row center">
-            </div>
             <br><br>
-
         </div>
     </div>
     <div class="parallax"><img src="<?php echo URL_IMG . "bg01.jpg" ?>" alt="Unsplashed background img 1"></div>

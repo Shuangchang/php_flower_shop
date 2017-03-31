@@ -8,4 +8,5 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="<?php echo URL_JS . "materialize.js" ?>"></script>
 <script src="<?php echo URL_JS. "init.js" ?>"></script>
+<script src="<?php echo URL_JS. "scripts.js" ?>"></script>
 </body>

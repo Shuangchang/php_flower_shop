@@ -1,0 +1,4 @@
+RewriteEngine On    # Turn on the rewriting engine
+
+RewriteRule    ^cart/?$    templates/cart.php    [NC,L]    # Handle requests for "templates"
+RewriteRule    ^admin/?$    templates/admin.php    [NC,L]    # Handle requests for "templates"
